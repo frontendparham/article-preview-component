@@ -18,7 +18,6 @@ You are able to:
 ### Links
 
 - Live Site URL: [GitHub Pages](https://frontendparham.github.io/article-preview-component/)
-- Live Site URL: [Netlify] (https://frontendparham.github.io/article-preview-component/)
 
 ## My process
 
