@@ -1,4 +1,4 @@
-# Article Preview Component - html, css, sass, javascript
+# Article Preview Component - html, css, scss, javascript
 You are able to: 
 - View the optimal layout for the component depending on your device's screen size
 - See the social media share links when you click the share icon
@@ -17,7 +17,8 @@ You are able to:
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://frontendparham.github.io/Iran-Natures/)
+- Live Site URL: [GitHub Pages](https://frontendparham.github.io/article-preview-component/)
+- Live Site URL: [Netlify] (https://frontendparham.github.io/article-preview-component/)
 
 ## My process
 
