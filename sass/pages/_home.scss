@@ -1,0 +1,9 @@
+.section-article-preview {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba($grayish-blue, 0.2);
+}

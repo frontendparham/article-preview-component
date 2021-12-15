@@ -1,0 +1,246 @@
+.card {
+  display: table;
+  width: 50%;
+  background-color: $color-white;
+  border-radius: 1rem;
+
+  @media only screen and (max-width: 82.375em) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: 61.8125em) {
+    width: 75%;
+  }
+
+  @media only screen and (max-width: 50em) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 41.25em) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__image {
+    background-image: url(../../images/drawers.jpg);
+    background-position: left;
+    background-size: cover;
+    display: table-cell;
+    height: 100%;
+    width: 40%;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+    @media only screen and (max-width: 41.25em) {
+      width: 100%;
+      height: 30vh;
+      display: block;
+      background-position: center;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  &__content {
+    width: 60%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 3.5rem;
+
+    @media only screen and (max-width: 41.25em) {
+      display: block;
+      width: 100%;
+      padding: 3rem 3.5rem 2rem 3.5rem;
+    }
+  }
+
+  &__heading {
+    color: $color-very-dark-grayish-blue;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  &__profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  &__profile {
+    display: table;
+  }
+
+  &__paragraph {
+    &--main {
+      color: $color-desaturated-dark-blue;
+      margin-bottom: 1.5rem;
+
+      @media only screen and (max-width: 41.25em) {
+        margin-bottom: 3.8rem;
+      }
+    }
+
+    &--name {
+      color: $color-very-dark-grayish-blue;
+      display: table-cell;
+      vertical-align: middle;
+      font-weight: 700;
+
+      & span {
+        color: $color-desaturated-dark-blue;
+      }
+    }
+
+    &--share {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $color-desaturated-dark-blue;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: table-cell;
+    margin-right: 1rem;
+  }
+
+  &__share-box {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: $color-light-grayish-blue;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 3;
+
+    &:hover {
+      background-color: $color-desaturated-dark-blue;
+    }
+  }
+
+  &__share-box-click-color {
+    background-color: $color-desaturated-dark-blue;
+  }
+
+  &__share-icon {
+    font-size: 1.8rem;
+    color: $color-very-dark-grayish-blue;
+    transition: color 0.2s;
+  }
+
+  &__share-box:hover &__share-icon {
+    color: $color-white;
+  }
+
+  &__social-container {
+    position: absolute;
+    top: -165%;
+    right: -24.5%;
+    box-shadow: 0 0.8rem 3rem rgba($color-black, 0.2);
+    z-index: 1;
+    width: 60%;
+
+    @media only screen and (max-width: 41.25em) {
+      width: 100%;
+      top: auto;
+      right: auto;
+      box-shadow: none;
+      transform: scale(1.28);
+    }
+
+    @media only screen and (max-width: 21.25em) {
+      transform: scale(1.4);
+    }
+  }
+
+  &__hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__social-box {
+    background-color: $color-very-dark-grayish-blue;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-radius: 1rem;
+
+    @media only screen and (max-width: 41.25em) {
+      padding: 2.5rem 2.5rem;
+      justify-content: flex-start;
+      border-radius: 0;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+
+    @media only screen and (max-width: 20.625em) {
+      padding: 2.5rem 1rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1rem;
+      width: 2rem;
+      top: 98%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-very-dark-grayish-blue;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+      @media only screen and (max-width: 41.25em) {
+        display: none;
+      }
+    }
+  }
+
+  &__social-icon {
+    color: $color-white;
+    font-size: 2rem;
+    transition: all 0.2s;
+
+    @media only screen and (max-width: 41.25em) {
+      margin-left: 1rem;
+    }
+
+    @media only screen and (max-width: 21.25em) {
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+
+      @media only screen and (max-width: 41.25em),
+        only screen and (hover: none) {
+        transform: none;
+      }
+    }
+
+    &--facebook {
+      &:hover {
+        color: $color-facebook;
+      }
+    }
+
+    &--twitter {
+      &:hover {
+        color: $color-twitter;
+      }
+    }
+
+    &--pinterest {
+      &:hover {
+        color: $color-pinterest;
+      }
+    }
+  }
+}

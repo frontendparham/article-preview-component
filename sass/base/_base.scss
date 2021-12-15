@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+}
+
+::selection {
+  background-color: $color-selection;
+  color: $color-light-grayish-blue;
+}
